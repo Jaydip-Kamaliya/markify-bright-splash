@@ -31,7 +31,7 @@ const pricingPlans = [
     ],
     price: "₹199 One-Time",
     cta: "Get Pro Version",
-    ctaLink: "#", // PLACEHOLDER: Insert Gumroad URL
+    ctaLink: "https://jaydipkamaliya.gumroad.com/l/markify-pro",
     variant: "premium" as const,
   },
   {
@@ -46,7 +46,7 @@ const pricingPlans = [
     ],
     price: "Contact for Pricing",
     cta: "Request Custom",
-    ctaLink: "mailto:contact@markify.app", // PLACEHOLDER
+    ctaLink: "mailto:jaydipkamaliya36@gmail.com?subject=Custom%20Markify%20Solution%20Request",
     variant: "outline" as const,
   },
 ];

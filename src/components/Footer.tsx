@@ -1,21 +1,31 @@
 import { Sparkles } from "lucide-react";
 
-const footerLinks = {
+type FooterLink = {
+  label: string;
+  href: string;
+  external?: boolean;
+};
+
+const footerLinks: {
+  product: FooterLink[];
+  legal: FooterLink[];
+  about: FooterLink[];
+} = {
   product: [
-    { label: "Download Free", href: "#" },
-    { label: "Upgrade to Pro", href: "#" },
-    { label: "Request Custom", href: "#" },
+    { label: "Download Free", href: "#download" },
+    { label: "Upgrade to Pro", href: "https://jaydipkamaliya.gumroad.com/l/markify-pro", external: true },
+    { label: "Request Custom", href: "mailto:jaydipkamaliya36@gmail.com?subject=Custom%20Markify%20Solution%20Request" },
     { label: "Features", href: "#features" },
   ],
   legal: [
-    { label: "Privacy Policy", href: "#" }, // PLACEHOLDER
-    { label: "Terms of Service", href: "#" }, // PLACEHOLDER
-    { label: "Contact", href: "#" }, // PLACEHOLDER
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "Contact", href: "mailto:jaydipkamaliya36@gmail.com" },
   ],
   about: [
-    { label: "About Markify", href: "#" },
+    { label: "About Markify", href: "#about" },
     { label: "How It Works", href: "#how-it-works" },
-    { label: "FAQ", href: "#" },
+    { label: "FAQ", href: "/faq" },
   ],
 };
 
@@ -46,6 +56,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     className="text-background/70 hover:text-background transition-colors text-sm"
+                    {...(link.external && { target: "_blank", rel: "noopener noreferrer" })}
                   >
                     {link.label}
                   </a>

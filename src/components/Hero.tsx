@@ -32,14 +32,11 @@ const Hero = () => {
             <Button variant="hero" size="xl" className="min-w-[220px]">
               Download Free Version
             </Button>
-            <Button variant="outline" size="xl" className="min-w-[220px]">
-              Upgrade to Pro
+            <Button variant="outline" size="xl" className="min-w-[220px]" asChild>
+              <a href="https://jaydipkamaliya.gumroad.com/l/markify-pro" target="_blank" rel="noopener noreferrer">
+                Upgrade to Pro
+              </a>
             </Button>
-          </div>
-
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-card rounded-full shadow-card border border-border">
-            <span className="text-sm font-medium text-foreground">100% Free • No Credit Card Required</span>
           </div>
 
           {/* Hero Image */}

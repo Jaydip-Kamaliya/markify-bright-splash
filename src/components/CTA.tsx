@@ -26,8 +26,11 @@ const CTA = () => {
               variant="outline"
               size="xl"
               className="min-w-[240px] bg-transparent text-primary-foreground border-2 border-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              asChild
             >
-              Get Pro for ₹199
+              <a href="https://jaydipkamaliya.gumroad.com/l/markify-pro" target="_blank" rel="noopener noreferrer">
+                Get Pro for ₹199
+              </a>
             </Button>
           </div>
 
