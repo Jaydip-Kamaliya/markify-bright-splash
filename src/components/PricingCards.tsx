@@ -16,7 +16,7 @@ const pricingPlans = [
     ],
     price: "Free Forever",
     cta: "Download Free (.exe)",
-    ctaLink: "#", // PLACEHOLDER
+    ctaLink: "https://github.com/Jaydip-Kamaliya/markify-bright-splash/releases/download/v1.0.0/Markify.Free.Setup.exe",
     variant: "outline" as const,
   },
   {

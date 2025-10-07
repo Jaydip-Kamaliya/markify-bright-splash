@@ -19,8 +19,11 @@ const CTA = () => {
               variant="outline"
               size="xl"
               className="min-w-[240px] bg-primary-foreground text-primary hover:bg-primary-foreground/90 hover:text-primary border-primary-foreground"
+              asChild
             >
-              Download Free Version
+              <a href="https://github.com/Jaydip-Kamaliya/markify-bright-splash/releases/download/v1.0.0/Markify.Free.Setup.exe" download>
+                Download Free Version
+              </a>
             </Button>
             <Button
               variant="outline"

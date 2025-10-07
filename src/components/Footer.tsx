@@ -12,7 +12,7 @@ const footerLinks: {
   about: FooterLink[];
 } = {
   product: [
-    { label: "Download Free", href: "#download" },
+    { label: "Download Free", href: "https://github.com/Jaydip-Kamaliya/markify-bright-splash/releases/download/v1.0.0/Markify.Free.Setup.exe" },
     { label: "Upgrade to Pro", href: "https://jaydipkamaliya.gumroad.com/l/markify-pro", external: true },
     { label: "Request Custom", href: "mailto:jaydipkamaliya36@gmail.com?subject=Custom%20Markify%20Solution%20Request" },
     { label: "Features", href: "#features" },
