@@ -4,7 +4,7 @@ import heroMockup from "@/assets/hero-mockup.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-subtle overflow-hidden">
+    <section id="about" className="relative bg-gradient-subtle overflow-hidden">
       <div className="container mx-auto px-4 py-20 md:py-32">
         <div className="flex flex-col items-center text-center space-y-8 animate-fade-in">
           {/* Logo Icon */}

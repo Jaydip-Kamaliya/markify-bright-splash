@@ -25,7 +25,7 @@ const comparisonData = [
 
 const ComparisonTable = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="features" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
@@ -79,8 +79,10 @@ const ComparisonTable = () => {
           </div>
 
           <div className="flex justify-center mt-8">
-            <Button variant="premium" size="xl" className="min-w-[280px]">
-              Upgrade to Pro Now
+            <Button variant="premium" size="xl" className="min-w-[280px]" asChild>
+              <a href="https://jaydipkamaliya.gumroad.com/l/markify-pro" target="_blank" rel="noopener noreferrer">
+                Upgrade to Pro Now
+              </a>
             </Button>
           </div>
         </div>
