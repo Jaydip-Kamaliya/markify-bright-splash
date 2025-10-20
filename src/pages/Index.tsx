@@ -4,6 +4,7 @@ import Features from "@/components/Features";
 import ComparisonTable from "@/components/ComparisonTable";
 import UseCases from "@/components/UseCases";
 import HowItWorks from "@/components/HowItWorks";
+import DemoVideo from "@/components/DemoVideo";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <ComparisonTable />
       <UseCases />
       <HowItWorks />
+      <DemoVideo />
       <CTA />
       <Footer />
     </main>
