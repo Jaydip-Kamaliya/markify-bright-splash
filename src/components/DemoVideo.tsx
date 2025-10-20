@@ -6,7 +6,9 @@ import { Play, Pause } from "lucide-react";
 const DemoVideo = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
 
   const togglePlayPause = () => {
     if (videoRef.current) {
@@ -21,6 +23,35 @@ const DemoVideo = () => {
 
   const handleVideoClick = () => {
     togglePlayPause();
+  };
+
+  const handleTimeUpdate = () => {
+    if (videoRef.current) {
+      const progressPercent = (videoRef.current.currentTime / videoRef.current.duration) * 100;
+      setProgress(progressPercent);
+    }
+  };
+
+  const handleTimelineClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (videoRef.current && timelineRef.current) {
+      const rect = timelineRef.current.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const percentage = (clickX / rect.width) * 100;
+      const newTime = (percentage / 100) * videoRef.current.duration;
+      videoRef.current.currentTime = newTime;
+      setProgress(percentage);
+    }
+  };
+
+  const handleTimelineDrag = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.buttons === 1 && videoRef.current && timelineRef.current) {
+      const rect = timelineRef.current.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const percentage = Math.max(0, Math.min(100, (clickX / rect.width) * 100));
+      const newTime = (percentage / 100) * videoRef.current.duration;
+      videoRef.current.currentTime = newTime;
+      setProgress(percentage);
+    }
   };
 
   return (
@@ -49,6 +80,7 @@ const DemoVideo = () => {
                 onClick={handleVideoClick}
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
+                onTimeUpdate={handleTimeUpdate}
               >
                 <source src={demoVideo} type="video/mp4" />
                 Your browser does not support the video tag.
@@ -91,8 +123,16 @@ const DemoVideo = () => {
                       <Play className="w-6 h-6" />
                     )}
                   </button>
-                  <div className="flex-1 h-1 bg-white/30 rounded-full overflow-hidden">
-                    <div className="h-full bg-primary rounded-full" style={{ width: '0%' }} />
+                  <div 
+                    ref={timelineRef}
+                    className="flex-1 h-1 bg-white/30 rounded-full overflow-hidden cursor-pointer hover:h-1.5 transition-all"
+                    onClick={handleTimelineClick}
+                    onMouseMove={handleTimelineDrag}
+                  >
+                    <div 
+                      className="h-full bg-primary rounded-full transition-all duration-100" 
+                      style={{ width: `${progress}%` }} 
+                    />
                   </div>
                 </div>
               </div>
