@@ -122,4 +122,4 @@ This project is licensed under the **MIT License**.
 
 ---
 
-> _“Protect your creativity, ”_
+> _“Protect your creativity”_
