@@ -1,8 +1,31 @@
-# Welcome to your Lovable project
+# Markify - Professional Watermarking Tool
+
+A modern, responsive landing page for Markify - a powerful watermarking tool that helps protect your digital content with customizable watermarks.
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/b9f5a324-800c-4475-9878-6680ba7c6962
+
+## About Markify
+
+Markify is a watermarking solution designed for photographers, content creators, and businesses who need to protect their digital assets. The application offers both free and pro versions with features including:
+
+- **Batch Processing**: Watermark multiple images at once
+- **Custom Watermarks**: Add text or logo watermarks
+- **Flexible Positioning**: Place watermarks anywhere on your images
+- **Adjustable Opacity**: Control watermark transparency
+- **Multiple Export Formats**: Support for various image formats
+- **High-Quality Output**: Maintain image quality after watermarking
+
+### Pricing Plans
+
+- **Free Version**: Basic watermarking features for personal use
+- **Pro Version**: ₹199 one-time payment for lifetime access with advanced features including:
+  - Unlimited batch processing
+  - Priority support
+  - Custom watermark templates
+  - Advanced positioning options
+  - Commercial license
 
 ## How can I edit this code?
 
@@ -54,11 +77,39 @@ npm run dev
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite**: Fast build tool and development server
+- **TypeScript**: Type-safe JavaScript
+- **React 18**: Modern React with hooks
+- **shadcn-ui**: Beautiful, accessible UI components
+- **Tailwind CSS**: Utility-first CSS framework
+- **Lucide React**: Icon library
+- **React Router DOM**: Client-side routing
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn-ui components
+│   ├── Hero.tsx        # Landing page hero section
+│   ├── Features.tsx    # Features showcase
+│   ├── HowItWorks.tsx  # Step-by-step guide
+│   ├── DemoVideo.tsx   # Interactive demo video player
+│   ├── PricingCards.tsx # Pricing plans
+│   ├── ComparisonTable.tsx # Free vs Pro comparison
+│   ├── UseCases.tsx    # Use case examples
+│   ├── CTA.tsx         # Call-to-action section
+│   └── Footer.tsx      # Page footer
+├── pages/              # Page components
+│   ├── Index.tsx       # Main landing page
+│   ├── FAQ.tsx         # Frequently asked questions
+│   ├── PrivacyPolicy.tsx
+│   └── TermsOfService.tsx
+├── assets/             # Static assets
+│   ├── hero-mockup.jpg
+│   └── markify-demo.mp4
+└── lib/                # Utility functions
+```
 
 ## How can I deploy this project?
 
