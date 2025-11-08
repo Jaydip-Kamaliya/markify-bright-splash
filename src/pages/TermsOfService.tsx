@@ -21,7 +21,7 @@ const TermsOfService = () => {
       {/* Content */}
       <main className="container mx-auto px-4 py-12 max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Terms of Service</h1>
-        <p className="text-muted-foreground mb-8">Last updated: January 2025</p>
+        <p className="text-muted-foreground mb-8">Last updated: November 2025</p>
 
         <div className="prose prose-slate max-w-none space-y-8">
           <section>
@@ -54,7 +54,7 @@ const TermsOfService = () => {
               <li>All current and future Pro features</li>
               <li>Lifetime updates</li>
               <li>Priority support</li>
-              <li>Valid for use on up to 2 devices per license</li>
+              <li>Valid for use on up to 1 device per license</li>
             </ul>
           </section>
 
@@ -72,22 +72,27 @@ const TermsOfService = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-4">4. Payment and Refunds</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">4. Payment and Refund Policy</h2>
             <p className="text-foreground/80 leading-relaxed mb-3">
-              Markify Pro is a one-time purchase processed through Gumroad. All sales are final, but we offer 
-              a 30-day money-back guarantee if:
+              Markify Pro is a one-time purchase processed securely through Gumroad.
+            </p>
+            <p className="text-foreground/80 leading-relaxed mb-3">
+              We offer a 10-day limited money-back guarantee under the following conditions:
             </p>
             <ul className="list-disc list-inside space-y-2 text-foreground/80">
-              <li>The software does not work as described</li>
-              <li>You experience technical issues we cannot resolve</li>
-              <li>You are not satisfied with the product</li>
+              <li>The software does not function as described</li>
+              <li>You encounter technical issues that we are unable to resolve</li>
+              <li>You are dissatisfied with the product within the first 10 days of purchase</li>
             </ul>
             <p className="text-foreground/80 leading-relaxed mt-3">
-              To request a refund, contact us at{" "}
+              <strong>Refund Amount:</strong> Refunds will be issued after deducting Gumroad’s processing fees and commissions from the original purchase amount. For example, if the product price is ₹199, you will receive the remaining amount after Gumroad’s deductions — typically around 40–50% of the purchase price.
+            </p>
+            <p className="text-foreground/80 leading-relaxed mt-3">
+              <strong>How to Request a Refund:</strong> To request a refund, please contact us at{" "}
               <a href="mailto:jaydipkamaliya36@gmail.com" className="text-primary hover:underline">
                 jaydipkamaliya36@gmail.com
               </a>{" "}
-              within 30 days of purchase.
+              within 10 days of your purchase. Once verified, we will process your eligible refund promptly.
             </p>
           </section>
 

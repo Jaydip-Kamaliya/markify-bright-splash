@@ -41,7 +41,7 @@ const FAQ = () => {
         },
         {
           q: "How do I activate Markify Pro?",
-          a: "After purchasing Markify Pro through Gumroad, you'll receive a license key via email. Open Markify, go to Settings, and enter your license key to unlock Pro features.",
+          a: "After purchasing Markify Pro through Gumroad, you’ll receive the direct Markify Pro .exe file. Simply download and install it. No separate activation or license key is required. You’ll have instant access to all Pro features right away.",
         },
       ],
     },
@@ -50,7 +50,7 @@ const FAQ = () => {
       questions: [
         {
           q: "Can I add both text and logo watermarks?",
-          a: "Yes! You can add text watermarks, logo watermarks, or both simultaneously. Logos support PNG images with transparency.",
+          a: "No, currently you can only add one type of watermark at a time.",
         },
         {
           q: "How does batch processing work?",
@@ -139,7 +139,7 @@ const FAQ = () => {
         },
         {
           q: "Do you offer refunds?",
-          a: "Yes! We offer a 30-day money-back guarantee on Markify Pro. If you're not satisfied or experience technical issues we can't resolve, contact us for a full refund.",
+          a: "Yes, we offer a 10-day limited money-back guarantee. If the software doesn’t work as described,you face unresolved technical issues, or you’re dissatisfied within the first 10 days of purchase, you can request a refund by contacting us at jaydipkamaliya36@gmail.com",
         },
         {
           q: "How can I request a new feature?",
