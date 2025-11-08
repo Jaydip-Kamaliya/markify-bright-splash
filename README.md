@@ -1,124 +1,125 @@
-# Markify - Professional Watermarking Tool
+# Markify — Professional Watermarking Tool  
 
-A modern, responsive landing page for Markify - a powerful watermarking tool that helps protect your digital content with customizable watermarks.
+A **modern, responsive landing page** for **Markify**, a powerful watermarking solution designed to protect your digital content with customizable watermarks.
 
-## Project info
+![Markify Banner](./src/assets/hero-mockup.jpg)
 
-**URL**: https://lovable.dev/projects/b9f5a324-800c-4475-9878-6680ba7c6962
+---
 
-## About Markify
+## 🚀 About Markify  
 
-Markify is a watermarking solution designed for photographers, content creators, and businesses who need to protect their digital assets. The application offers both free and pro versions with features including:
+**Markify** is a watermarking solution built for **photographers, content creators, and businesses** who want to safeguard their digital assets with ease.  
+It comes in **Free** and **Pro** versions, offering a streamlined, professional experience.
 
-- **Batch Processing**: Watermark multiple images at once
-- **Custom Watermarks**: Add text or logo watermarks
-- **Flexible Positioning**: Place watermarks anywhere on your images
-- **Adjustable Opacity**: Control watermark transparency
-- **Multiple Export Formats**: Support for various image formats
-- **High-Quality Output**: Maintain image quality after watermarking
+### ✨ Key Features  
 
-### Pricing Plans
+- 🖼️ **Batch Processing** — Watermark multiple images at once  
+- 🧩 **Custom Watermarks** — Add text or logo-based watermarks  
+- 📍 **Flexible Positioning** — Place watermarks anywhere on your image  
+- 🌫️ **Adjustable Opacity** — Control transparency to fit your aesthetic   
+- 🏆 **High-Quality Output** — Preserve image quality after watermarking  
 
-- **Free Version**: Basic watermarking features for personal use
-- **Pro Version**: ₹199 one-time payment for lifetime access with advanced features including:
-  - Unlimited batch processing
-  - Priority support
-  - Custom watermark templates
-  - Advanced positioning options
-  - Commercial license
+---
 
-## How can I edit this code?
+## 💰 Pricing Plans  
 
-There are several ways of editing your application.
+| Plan | Price | Features |
+|------|--------|-----------|
+| **Free** | ₹0 | Basic watermarking for personal use |
+| **Pro** | ₹199 (one-time) | Lifetime access + advanced tools |
+| | | - Unlimited batch processing<br>- Priority support<br>- Advanced positioning options<br>- Commercial license |
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b9f5a324-800c-4475-9878-6680ba7c6962) and start prompting.
+## 🛠️ Getting Started  
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🧑‍💻 Edit Locally with Your Preferred IDE  
 
-**Use your preferred IDE**
+If you want to work locally and contribute, you can **clone this repository** and submit a pull request for your improvements.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+> **Requirement:** Node.js & npm installed  
+> [Install Node.js using nvm →](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### ⚙️ Setup Steps  
 
-Follow these steps:
+```bash
+# Step 1: Clone the repository
+git clone https://github.com/Jaydip-Kamaliya/markify-bright-splash.git
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 2: Navigate into the project directory
+cd markify-bright-splash
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 3: Install all dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Your app should now be running at **http://localhost:8080** 🎉  
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🧩 Tech Stack  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Markify is powered by a modern, fast, and type-safe web stack:
 
-## What technologies are used for this project?
+- ⚡ **Vite** — Lightning-fast build tool  
+- 🧠 **TypeScript** — Type-safe JavaScript  
+- ⚛️ **React 18** — Component-based UI with hooks  
+- 💅 **shadcn/ui** — Beautiful, accessible UI components  
+- 🎨 **Tailwind CSS** — Utility-first CSS framework  
+- 🖋️ **Lucide React** — Icon library  
+- 🧭 **React Router DOM** — Client-side routing  
 
-This project is built with:
+---
 
-- **Vite**: Fast build tool and development server
-- **TypeScript**: Type-safe JavaScript
-- **React 18**: Modern React with hooks
-- **shadcn-ui**: Beautiful, accessible UI components
-- **Tailwind CSS**: Utility-first CSS framework
-- **Lucide React**: Icon library
-- **React Router DOM**: Client-side routing
+## 🗂️ Project Structure  
 
-## Project Structure
-
-```
+```plaintext
 src/
-├── components/          # Reusable UI components
-│   ├── ui/             # shadcn-ui components
-│   ├── Hero.tsx        # Landing page hero section
-│   ├── Features.tsx    # Features showcase
-│   ├── HowItWorks.tsx  # Step-by-step guide
-│   ├── DemoVideo.tsx   # Interactive demo video player
-│   ├── PricingCards.tsx # Pricing plans
-│   ├── ComparisonTable.tsx # Free vs Pro comparison
-│   ├── UseCases.tsx    # Use case examples
-│   ├── CTA.tsx         # Call-to-action section
-│   └── Footer.tsx      # Page footer
-├── pages/              # Page components
-│   ├── Index.tsx       # Main landing page
-│   ├── FAQ.tsx         # Frequently asked questions
+├── components/              # Reusable UI components
+│   ├── ui/                  # shadcn-ui base components
+│   ├── Hero.tsx             # Landing page hero section
+│   ├── Features.tsx         # Features showcase
+│   ├── HowItWorks.tsx       # Step-by-step guide
+│   ├── DemoVideo.tsx        # Interactive demo video player
+│   ├── PricingCards.tsx     # Pricing plans
+│   ├── ComparisonTable.tsx  # Free vs Pro comparison
+│   ├── UseCases.tsx         # Use case examples
+│   ├── CTA.tsx              # Call-to-action section
+│   └── Footer.tsx           # Page footer
+├── pages/                   # Page components
+│   ├── Index.tsx            # Main landing page
+│   ├── FAQ.tsx              # Frequently asked questions
 │   ├── PrivacyPolicy.tsx
 │   └── TermsOfService.tsx
-├── assets/             # Static assets
+├── assets/                  # Static assets
 │   ├── hero-mockup.jpg
 │   └── markify-demo.mp4
-└── lib/                # Utility functions
+└── lib/                     # Utility functions
 ```
 
-## How can I deploy this project?
+## 🤝 Contributing  
 
-Simply open [Lovable](https://lovable.dev/projects/b9f5a324-800c-4475-9878-6680ba7c6962) and click on Share -> Publish.
+Contributions are welcome! 🎉  
+If you find bugs or have feature ideas, feel free to **open an issue** or **submit a pull request**.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 📜 License  
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This project is licensed under the **MIT License**.  
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+---
+
+## 🌐 Connect  
+
+- **Author:** [Jaydip Kamaliya](https://github.com/Jaydip-Kamaliya)  
+- **Repository:** [Markify Bright Splash](https://github.com/Jaydip-Kamaliya/markify-bright-splash)  
+- **Email:** jaydipkamaliya36@gmail.com  
+
+---
+
+> _“Protect your creativity, ”_
