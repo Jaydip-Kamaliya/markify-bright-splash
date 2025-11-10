@@ -1,8 +1,16 @@
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroMockup from "@/assets/hero-mockup.jpg";
+import { useDownloadCounter } from "@/hooks/useDownloadCounter";
+import DownloadCounter from "@/components/DownloadCounter";
 
 const Hero = () => {
+  const { downloadCount, incrementDownload, isLoading } = useDownloadCounter();
+
+  const handleDownloadClick = () => {
+    incrementDownload();
+  };
+
   return (
     <section id="about" className="relative bg-gradient-subtle overflow-hidden">
       <div className="container mx-auto px-4 py-20 md:py-32">
@@ -28,17 +36,26 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <Button variant="hero" size="xl" className="min-w-[220px]" asChild>
-              <a href="https://github.com/Jaydip-Kamaliya/markify-bright-splash/releases/download/v1.0.0/Markify.Free.Setup.exe" download>
-                Download Free Version
-              </a>
-            </Button>
-            <Button variant="outline" size="xl" className="min-w-[220px]" asChild>
-              <a href="https://jaydipkamaliya.gumroad.com/l/markify-pro" target="_blank" rel="noopener noreferrer">
-                Upgrade to Pro
-              </a>
-            </Button>
+          <div className="flex flex-col items-center gap-4 mt-8">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="hero" size="xl" className="min-w-[220px]" asChild>
+                <a 
+                  href="https://github.com/Jaydip-Kamaliya/markify-bright-splash/releases/download/v1.0.0/Markify.Free.Setup.exe" 
+                  download
+                  onClick={handleDownloadClick}
+                >
+                  Download Free Version
+                </a>
+              </Button>
+              <Button variant="outline" size="xl" className="min-w-[220px]" asChild>
+                <a href="https://jaydipkamaliya.gumroad.com/l/markify-pro" target="_blank" rel="noopener noreferrer">
+                  Upgrade to Pro
+                </a>
+              </Button>
+            </div>
+            
+            {/* Download Counter */}
+            <DownloadCounter count={downloadCount} isLoading={isLoading} />
           </div>
 
           {/* Hero Image */}

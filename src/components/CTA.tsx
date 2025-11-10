@@ -1,7 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
+import { useDownloadCounter } from "@/hooks/useDownloadCounter";
 
 const CTA = () => {
+  const { incrementDownload } = useDownloadCounter();
+
+  const handleDownloadClick = () => {
+    incrementDownload();
+  };
+
   return (
     <section className="relative py-24 bg-gradient-primary overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
@@ -21,7 +28,11 @@ const CTA = () => {
               className="min-w-[240px] bg-primary-foreground text-primary hover:bg-primary-foreground/90 hover:text-primary border-primary-foreground"
               asChild
             >
-              <a href="https://github.com/Jaydip-Kamaliya/markify-bright-splash/releases/download/v1.0.0/Markify.Free.Setup.exe" download>
+              <a 
+                href="https://github.com/Jaydip-Kamaliya/markify-bright-splash/releases/download/v1.0.0/Markify.Free.Setup.exe" 
+                download
+                onClick={handleDownloadClick}
+              >
                 Download Free Version
               </a>
             </Button>

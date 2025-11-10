@@ -1,4 +1,5 @@
 import { Sparkles } from "lucide-react";
+import { useDownloadCounter } from "@/hooks/useDownloadCounter";
 
 type FooterLink = {
   label: string;
@@ -30,6 +31,14 @@ const footerLinks: {
 };
 
 const Footer = () => {
+  const { incrementDownload } = useDownloadCounter();
+
+  const handleLinkClick = (label: string) => {
+    if (label === "Download Free") {
+      incrementDownload();
+    }
+  };
+
   return (
     <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 py-12">
@@ -56,6 +65,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     className="text-background/70 hover:text-background transition-colors text-sm"
+                    onClick={() => handleLinkClick(link.label)}
                     {...(link.external && { target: "_blank", rel: "noopener noreferrer" })}
                   >
                     {link.label}

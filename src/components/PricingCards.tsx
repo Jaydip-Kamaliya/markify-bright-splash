@@ -2,6 +2,7 @@ import { Download, Crown, Settings, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useDownloadCounter } from "@/hooks/useDownloadCounter";
 
 const pricingPlans = [
   {
@@ -52,6 +53,14 @@ const pricingPlans = [
 ];
 
 const PricingCards = () => {
+  const { incrementDownload } = useDownloadCounter();
+
+  const handleDownloadClick = (planTitle: string) => {
+    if (planTitle === "Markify Free") {
+      incrementDownload();
+    }
+  };
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -103,7 +112,12 @@ const PricingCards = () => {
                   className="w-full"
                   asChild
                 >
-                  <a href={plan.ctaLink}>{plan.cta}</a>
+                  <a 
+                    href={plan.ctaLink}
+                    onClick={() => handleDownloadClick(plan.title)}
+                  >
+                    {plan.cta}
+                  </a>
                 </Button>
               </CardFooter>
             </Card>
